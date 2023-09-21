@@ -1,0 +1,11 @@
+version: '3'
+
+services: 
+  postgresql:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432 
+    environment:
+      - POSTGRESQL_USERNAME=rocketseat-zero
+      - POSTGRESQL_PASSWORD=root
+      - POSTGRESQL_DATABASE=rocketzero_database
