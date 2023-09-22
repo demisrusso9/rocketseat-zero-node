@@ -4,6 +4,10 @@ import z from 'zod'
 const database = new Database()
 
 export async function appRoutes(app) {
+  app.get('/testing', async (req, reply) => {
+    return reply.send('Hello World')
+  })
+
   app.get('/videos', async (req, reply) => {
     const result = await database.list()
 
